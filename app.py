@@ -52,13 +52,8 @@ with tab1:
     if len(countries_filtered) > 5:
         st.sidebar.warning("Please select a maximum of 5 countries.")
         st.stop()
-    filter = st.sidebar.checkbox("Filter by year")
 
     if br_dr == "Birth Rate":
-        if filter:
-            year = st.sidebar.number_input("Filter by year", min_value=1960, max_value=2025, step=1)
-            result = df_long_br[(df_long_br["Country Name"].isin(countries_filtered)) & (df_long_br["year"] == year)]
-
         country_df_br = df_long_br[df_long_br["Country Name"].isin(countries_filtered)]
         fig, ax = plt.subplots(figsize=(12, 5))
         sns.lineplot(data=country_df_br, x="year", y="birth_rate", hue="Country Name", ax=ax)
