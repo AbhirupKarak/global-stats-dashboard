@@ -4,14 +4,14 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 #Loading the CSV files and cleaing it up
-df_br = pd.read_csv(r"C:\Games\CODE\python\project\birth_rate.csv", skiprows=3)
+df_br = pd.read_csv("birth_rate.csv", skiprows=3)
 
 df_long_br = df_br.melt(
     id_vars = ['Country Name', 'Country Code', 'Indicator Name', "Indicator Code"],
     var_name = 'year',
     value_name="birth_rate"
 )
-df_dr = pd.read_csv(r"C:\Games\CODE\python\project\death_rate.csv", skiprows=3)
+df_dr = pd.read_csv("death_rate.csv", skiprows=3)
 
 df_long_dr = df_dr.melt(
     id_vars = ['Country Name', 'Country Code', 'Indicator Name', "Indicator Code"],
@@ -27,7 +27,7 @@ df_long_dr = df_long_dr[df_long_dr["year"] != "Unnamed: 70"]
 df_long_dr["year"] = df_long_dr["year"].astype(int)
 df_long_dr = df_long_dr.dropna(subset=["death_rate"])
 
-df_p = pd.read_csv(r"C:\Games\CODE\python\project\population.csv", skiprows=3)
+df_p = pd.read_csv("population.csv", skiprows=3)
 
 df_long_p = df_p.melt(
     id_vars = ['Country Name', 'Country Code', 'Indicator Name', "Indicator Code"],
