@@ -98,7 +98,7 @@ with tab1:
 #Top 10 Highest Birth / Death Rate Countries for a specific year with a bar graph
 
 with tab2:
-    yr_b = st.sidebar.number_input("Choose the year for Birth Rates", min_value=1960, max_value= 2025, step=1)
+    yr_b = st.sidebar.number_input("Choose the year for Birth Rates", min_value=1960, max_value= 2023, step=1)
     sns.barplot(data=df_long_br[df_long_br["year"] == yr_b].sort_values("birth_rate", ascending=False).head(10), x="Country Name", y="birth_rate")
     plt.title(f"Top 10 Highest Birth Rates in {yr_b}")
     plt.ylabel("Birth Rate (per 1,000 people per year)")
@@ -108,7 +108,7 @@ with tab2:
     st.pyplot(plt)
     plt.clf()
 
-    yr_d = st.sidebar.number_input("Choose the year for Death Rates", min_value=1960, max_value= 2025, step=1)
+    yr_d = st.sidebar.number_input("Choose the year for Death Rates", min_value=1960, max_value= 2023, step=1)
 
     sns.barplot(data=df_long_dr[df_long_dr["year"] == yr_d].sort_values("death_rate", ascending=False).head(10), x="Country Name", y="death_rate")
     plt.title(f"Top 10 Highest Death Rates in {yr_d}")
