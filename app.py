@@ -2,8 +2,8 @@ import streamlit as st
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-
-plt.rcParams["font.family"] = "Georgia"
+from matplotlib import font_manager
+plt.rcParams["font.family"] = "STIXGeneral"
 
 st.set_page_config(page_title="Global Statistics Dashboard", page_icon="🌍", layout="wide")
 
