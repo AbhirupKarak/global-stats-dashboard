@@ -62,7 +62,7 @@ with tab1:
         ax.set_title("Birth Rate over Time", fontsize=12)
         ax.set_xlabel("Year")
         ax.set_ylabel("Birth Rate (per 1,000 people per year)")
-        st.pyplot(fig)
+        st.pyplot(fig, use_container_width=True)
         plt.clf()
     else:
         if filter:
@@ -77,7 +77,7 @@ with tab1:
         ax.set_title("Death Rate over Time", fontsize=12)
         ax.set_xlabel("Year")
         ax.set_ylabel("Death Rate (per 1,000 people per year)")
-        st.pyplot(fig)
+        st.pyplot(fig, use_container_width=True)
         plt.clf()
 
     country_df_br = df_long_br[df_long_br["Country Name"].isin(countries_filtered)]
@@ -134,7 +134,7 @@ with tab3:
     ax.set_title("Birth and Death Rates over Time", fontsize=12)
     ax.set_xlabel("Year")
     ax.set_ylabel("Birth/Death Rate (per 1,000 people per year)")
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=True)
     plt.clf()
 
 with tab4:
@@ -148,7 +148,7 @@ with tab4:
     ax.set_title("World Birth Rate over Time", fontsize=12)
     ax.set_xlabel("Year")
     ax.set_ylabel("Birth Rate (per 1,000 people per year)")
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=True)
     plt.clf()
 
     #Sub-Saharan Africa Birth Rate
@@ -163,7 +163,7 @@ with tab4:
     ax.set_title("Birth Rate over Time", fontsize=12)
     ax.set_xlabel("Year")
     ax.set_ylabel("Birth Rate (per 1,000 people per year)")
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=True)
     plt.clf()
 
     #Korea Birth Rate
@@ -174,5 +174,5 @@ with tab4:
     ax.set_title("Birth Rate over Time", fontsize=12)
     ax.set_xlabel("Year")
     ax.set_ylabel("Birth Rate (per 1,000 people per year)")
-    st.pyplot(fig)
+    st.pyplot(fig, use_container_width=True)
     plt.clf()
