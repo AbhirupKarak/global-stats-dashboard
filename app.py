@@ -3,7 +3,7 @@ import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
 
-plt.rcParams["font.family"] = "helvetica"
+plt.rcParams["font.family"] = "Georgia"
 
 st.set_page_config(page_title="Global Statistics Dashboard", page_icon="🌍", layout="wide")
 
