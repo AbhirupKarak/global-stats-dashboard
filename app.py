@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from matplotlib import font_manager
 plt.rcParams["font.family"] = "STIXGeneral"
+plt.rcParams["figure.dpi"] = 150
 
 st.set_page_config(page_title="Global Statistics Dashboard", page_icon="🌍", layout="wide")
 
